@@ -22,7 +22,10 @@ function submitdelete(event) {
   var fn = $("#name").val();
   var ln = $("#lastname").val();
   var label = $(event.target).attr("data-label");
-  submituser("../controller/delete.php", fn, ln, label);
+  var isdelete = confirm("Are you sure you want to delete this?");
+  if (isdelete) {
+    submituser("../controller/delete.php", fn, ln, label);
+  }
 }
 
 function submituser(url, firstname, lastname, label) {

@@ -15,7 +15,7 @@
       $sql = "update `tbl_user` SET `name`=:Firstname,`surname`=:Lastname WHERE name = :Firstname";
 
   
-        $arraydata= array(
+        $arraydata= array(  
                 'Firstname' => "$Firstname",
                 'Lastname' => "$Lastname");
  
