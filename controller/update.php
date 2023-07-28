@@ -11,7 +11,7 @@
     $Lastname = $_POST['LastName'];
 
 
-     //MUST BE ID
+      //MUST BE ID wala lang pong enough time po to get the id back after ma insert , if may time po gagawin ko po syang table type then andun po ID
       $sql = "update `tbl_user` SET `name`=:Firstname,`surname`=:Lastname WHERE name = :Firstname";
 
   

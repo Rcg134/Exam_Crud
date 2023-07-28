@@ -4,16 +4,16 @@ $Conn = new SqlCon();
 $Conn->SetDb();
 $pdo = $Conn->SetSQLCon();
 
-$Firstname = $_POST['FirstName']; // Correct the typo in the variable name (change "FirstName" to "FirstName")
+$Firstname = $_POST['FirstName'];
 
-// SQL query to delete the user by first name
+ //MUST BE ID wala lang pong enough time po to get the id back after ma insert , if may time po gagawin ko po syang table list type then andun po ID
 $sql = "DELETE FROM `tbl_user` WHERE name = :Firstname";
 
-// Bind the parameter for the first name only
+
 $arraydata = array(
     'Firstname' => $Firstname,
 );
 
-// Call the SQLConTSQL function to execute the query
+
 echo $Conn->SQLConTSQL($sql, $arraydata, $pdo);
 ?>
