@@ -39,9 +39,8 @@ function submituser(url, firstname, lastname, label) {
     cache: false,
     success: function (dataResult) {
       if (dataResult == true) {
-        label == "Delete" ? location.reload() : alert(label); : 
-      
-    } else {
+        label == "Delete" ? location.reload() : alert(label);
+      } else {
         alert(dataResult);
       }
     },
